@@ -1,9 +1,3 @@
-$card-width: 200px;
-$screen-size:
-  2 488px,
-  3 788px,
-  4 1024px;
-
 .catalog {
   display: grid;
   justify-content: center;
@@ -13,9 +7,7 @@ $screen-size:
 
   @each $col-count, $size in $screen-size {
     @media (min-width: #{$size}) {
-      & {
-        grid-template-columns: repeat(#{$col-count}, $card-width);
-      }
+      grid-template-columns: repeat(#{$col-count}, $card-width);
     }
   }
 
